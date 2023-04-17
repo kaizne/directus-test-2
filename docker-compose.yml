@@ -1,0 +1,18 @@
+version: '3'
+services:
+  directus:
+    image: directus/directus:latest
+    ports:
+      - 8055:8055
+    volumes:
+      - ./uploads:/directus/uploads
+      - ./database:/directus/database
+    environment:
+      KEY: 'en859UfLz]>*3<J17MbTd$Zb\NH=5\1y/Zo9'
+      SECRET: 'Cp6M\948AS?g:*h1}X?0&11Mnb=}{|yLd;km'
+
+      DB_CLIENT: 'sqlite3'
+      DB_FILENAME: './database/data.db'
+
+      ADMIN_EMAIL: 'admin@example.com'
+      ADMIN_PASSWORD: 'handsomeaf'
